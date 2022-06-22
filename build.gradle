@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.webAuto'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '3.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.0.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.0.0'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '6.10'
+
+}
+
+test {
+    useTestNG()
+}
